@@ -6,8 +6,8 @@ install:
 	cp -r laravel/. .
 	rm -rf laravel
 	cp .env.example .env
-	#docker-compose run --rm php composer install
-	#docker-compose run --rm node npm install
+	docker-compose run --rm php composer install
+	docker-compose run --rm node npm install
 
 clean:
 	rm -rf .git
