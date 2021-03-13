@@ -1,10 +1,10 @@
 .PHONY: clean install
 
 install:
-	git clone https://github.com/laravel/laravel laravel
-	rm -rf laravel/.git laravel/README.md laravel/CHANGELOG.md laravel/.env.example
-	cp -r laravel/. .
-	rm -rf laravel
+	git clone https://github.com/laravel/laravel temp
+	rm -rf temp/.git temp/README.md temp/CHANGELOG.md temp/.env.example
+	cp -r temp/. .
+	rm -rf temp
 	cp .env.example .env
 	docker-compose run --rm php composer install
 	docker-compose run --rm node npm install
